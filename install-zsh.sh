@@ -55,6 +55,11 @@ if [[ ! -d "$zsh_custom/plugins/zsh-syntax-highlighting" ]]; then
     "$zsh_custom/plugins/zsh-syntax-highlighting"
 fi
 
+if [[ ! -d "$zsh_custom/plugins/fast-syntax-highlighting" ]]; then
+  git clone --depth=1 https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+    "$zsh_custom/plugins/fast-syntax-highlighting"
+fi
+
 target_config="$HOME/.zshrc"
 if [[ -e "$target_config" ]] && ! cmp -s "$config_file" "$target_config"; then
   backup_file="$target_config.backup.$(date +%Y%m%d%H%M%S)"
