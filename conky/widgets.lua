@@ -1,5 +1,5 @@
 require 'cairo'
-require 'cairo_xlib'
+-- require 'cairo_xlib'
 
 local PI = math.pi
 
